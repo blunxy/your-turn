@@ -1,0 +1,12 @@
+name: Auto GAE Deploy
+
+on: [push]
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Google App Engine (GAE) Deploy
+      uses: atRobertoFlores/gae_deploy_action@1.2
+      with:
+        service_account: ${{ secrets.SERVICE_ACCOUNT }}
+        project_name: ${{ secrets.PROJECT_NAME }}
